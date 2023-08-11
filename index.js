@@ -12,5 +12,35 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map(array => {
+  return array
+    .split(" ")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+    })
+    
 }
+
+
+// function titleCased() {
+//   // Function to convert a string to title case with exceptions for specific words
+//   const toTitleCase = (str) => {
+//     const uppercaseWords = ["API", "OO", "PreventDefault", "JSONP"];
+//     return str
+//         .split(" ")
+//         .map((word) => {
+//             // Keep specific uppercase words in original case
+//             if (uppercaseWords.includes(word.toUpperCase())) {
+//                 return word.toUpperCase();
+//             } else {
+//                 return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+//             }
+//         })
+//         .join(" ");
+// };
+
+// // Return an array of tutorial names in title case
+// return tutorials.map(toTitleCase);
+// }
+
+
